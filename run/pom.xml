@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>starter-demo</artifactId>
+        <groupId>top.meethigher.starter</groupId>
+        <version>1.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>run</artifactId>
+
+    <properties>
+        <java.version>8</java.version>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>2.5.4</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>top.meethigher.starter</groupId>
+            <artifactId>test-starter</artifactId>
+            <version>2.5.4</version>
+        </dependency>
+        <dependency>
+            <groupId>top.meethigher.starter</groupId>
+            <artifactId>http-flowcontrol-starter</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>top.meethigher.starter</groupId>
+            <artifactId>http-log-starter</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>top.meethigher</groupId>
+            <artifactId>cache-store</artifactId>
+            <version>1.2</version>
+        </dependency>
+    </dependencies>
+
+
+</project>
