@@ -58,6 +58,11 @@
             <artifactId>cache-store</artifactId>
             <version>1.2</version>
         </dependency>
+        <dependency>
+            <groupId>top.meethigher.starter</groupId>
+            <artifactId>import-bean-starter</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
 
 

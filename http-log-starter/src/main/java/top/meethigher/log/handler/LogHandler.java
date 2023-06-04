@@ -14,7 +14,6 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import java.net.URLDecoder;
-import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 
 /**
@@ -53,10 +52,10 @@ public class LogHandler {
 
         HttpServletRequest request = attributes.getRequest();
         // 记录下请求内容
-        log.info("请求响应信息如下:\n地址 => {}\n设备 => {}\n请求类型 => {}\n访问IP => {}\n请求参数 => {}\n返回值 => {}\n响应时间 => {}毫秒",
-                request.getMethod()+" "+ URLDecoder.decode(request.getRequestURI(), "utf-8"),
+        log.info("请求响应信息如下:\n请求地址 => {}\n请求设备 => {}\n请求类型 => {}\n请求来源 => {}\n请求参数 => {}\n响应内容 => {}\n响应时间 => {}毫秒",
+                URLDecoder.decode(request.getRequestURI(), "utf-8"),
                 request.getHeader("User-Agent"),
-                request.getContentType(),
+                request.getMethod(),
                 getRemoteAddr(request),
                 reqArgsThreadLocal.get(),
                 ret,

@@ -13,6 +13,7 @@
         <module>run</module>
         <module>http-flowcontrol-starter</module>
         <module>http-log-starter</module>
+        <module>import-bean-starter</module>
     </modules>
 
     <properties>

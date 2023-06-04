@@ -20,7 +20,7 @@ public class LogAutoConfiguration {
     @Bean
     public LogHandler logHandler() {
         LogHandler logHandler = new LogHandler();
-        log.info("自动装配bean--日志切面处理器");
+        log.debug("自动装配bean--日志切面处理器");
         return logHandler;
     }
 }
